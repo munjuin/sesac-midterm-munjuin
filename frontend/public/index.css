@@ -12,8 +12,6 @@ body {
 .flex {
   width: 50%;
 }
-.flex button:visited {
-}
 .search {
   text-align: center;
 }
@@ -41,7 +39,6 @@ img {
   .flex {
     width: 25%;
   }
-}
-.checkbox {
-  background-color: green;
+  span {
+  }
 }
