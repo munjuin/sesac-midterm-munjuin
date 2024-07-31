@@ -8,3 +8,5 @@ const sequelize = new Sequelize(
   config.password,
   config.database
 );
+
+const Todo = require("./Todo")(sequelize, Sequelize);
