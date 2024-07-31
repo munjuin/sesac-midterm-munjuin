@@ -20,14 +20,28 @@ body {
 img {
   width: 200px;
 }
-@media (min-width: 960) {
-  .flex {
-    width: 100%;
-  }
-}
 
 @media (max-width: 540px) {
   .flex {
     width: 100%;
   }
+}
+@media (max-width: 960px) {
+  .container {
+    display: flex;
+  }
+  .flex {
+    width: 50%;
+  }
+}
+@media (min-width: 961px) {
+  .container {
+    display: flex;
+  }
+  .flex {
+    width: 25%;
+  }
+}
+.checkbox {
+  background-color: green;
 }
