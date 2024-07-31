@@ -1,12 +1,14 @@
-const Sequelize = require("sequelize"); // sequelize 패키지를 불러옴
-const config = require(__dirname + "/../config/config.json")["development"];
-const db = {};
+const Sequelize = require("sequelize");
+const config = require(__dirname + "/../config/config.json");
 
 const sequelize = new Sequelize(
   config.host,
   config.username,
   config.password,
-  config.database
+  config.database,
+  config
 );
 
 const Todo = require("./Todo")(sequelize, Sequelize);
+
+module.exports = Todo;

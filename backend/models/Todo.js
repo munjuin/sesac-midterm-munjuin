@@ -1,5 +1,3 @@
-const { Sequelize, DataTypes } = require("sequelize");
-
 const Todo = (Sequelize, DataTypes) => {
   const Todo = sequelize.define(
     "Todo",

@@ -7,10 +7,9 @@ const { sequelize } = require("./models/index");
 app.use("/todos", router);
 
 sequelize
-  .sync({ force: false })
+  .sync({ force: true })
   .then(() => {
     app.listen(PORT, () => {
-      console.log("Database connection succeeded!");
       console.log(`Server is running! Port number is ${PORT} ...`);
     });
   })
