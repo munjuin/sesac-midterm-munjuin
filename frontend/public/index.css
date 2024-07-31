@@ -18,6 +18,9 @@ body {
 img {
   width: 200px;
 }
+.flex input:checked {
+  text-decoration: line-through;
+}
 
 @media (max-width: 540px) {
   .flex {
