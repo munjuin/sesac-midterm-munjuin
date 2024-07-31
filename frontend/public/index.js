@@ -2,12 +2,15 @@ window.addEventListener("DOMContentLoaded", () => {
   const getTodos = async () => {
     const response = await fetch("https://jsonplaceholder.typicode.com/todos", {
       method: "GET",
-    });
-    const data = await response.json();
-
-    return data;
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
   };
-  getTodos();
+  request();
 
   const div = document.querySelector(".container");
   for (let i = 0; i < 11; i++) {
@@ -15,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <div>
         <input type="checkbox">
         <p>${getTodos[i]}</p>
-        <button>X</button> 
+        <button>X</button>
     `;
   }
 });
